@@ -1,6 +1,5 @@
 {
     "version": 2,
-<<<<<<< HEAD
     "builds": [
         {
             "src": "index.js",
@@ -19,7 +18,4 @@
             "dest": "index.js"
         }
     ]
-=======
-    "rewrites": [{"source": "/.(.*)", "destination": "/api"}]
->>>>>>> fcbe8f03a3c9adadcfe3d9a822f7523283ae8594
 }
