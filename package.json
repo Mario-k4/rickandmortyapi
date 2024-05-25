@@ -2,7 +2,6 @@
   "name": "rick-and-morty-v2",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
