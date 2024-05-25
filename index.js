@@ -1,6 +1,7 @@
-import express from "express"
-import axios from "axios"
-import bodyParser from "body-parser"
+const express = require('express');
+const axios = require('axios');
+const bodyParser = require('body-parser');
+require('ejs')
 
 const app = express();
 const port = 3000;
@@ -12,17 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.render("index.ejs");
 });
-
-// app.get('/characters', async (req, res) => {
-//     try {
-//         const response = await axios.get(API_URL + '/character');
-//         const characters = response.data.results;
-//         res.render('characters.ejs', { characters });
-//     } catch (error) {
-//         console.error('Error fetching characters:', error.message);
-//         res.status(500).send('Error fetching characters');
-//     }
-// });
 
 app.get('/characters', async (req, res) => {
     try {
@@ -104,3 +94,4 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
 
+module.exports = app;
